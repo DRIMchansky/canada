@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+      "allowSyntheticDefaultImports": true,
+      "resolveJsonModule": true,
+      "moduleResolution": "node",
+      "module": "ESNext",
+      "target": "ESNext",
+      "removeComments": true,
+      "noImplicitAny": false,
+      "preserveConstEnums": true,
+      "skipLibCheck": true,
+      "locale": "ru",
+      "allowJs": true,
+      "alwaysStrict": true,
+      "typeRoots": [
+          "node_modules/@types"
+      ]
+  },
+  "exclude": [
+    "postcss.config.js",
+    "./src/data/**",
+    "./dist/**"
+  ]
+}
