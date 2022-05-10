@@ -1,11 +1,11 @@
 {
   "private": true,
   "scripts": {
-    "watch": "concurrently --kill-others \"npm run watch:11ty\" \"npm run watch:css\" \"npm run watch:scripts\"",
+    "watch": "cross-env-shell NODE_ENV=development npm run clear && concurrently --kill-others \"npm run watch:11ty\" \"npm run watch:css\" \"npm run watch:scripts\"",
     "watch:11ty": "eleventy --serve --quiet",
     "watch:css": "npx postcss src/styles/styles.css --output dist/styles/styles.css --watch",
     "watch:scripts": "npx parcel watch ./src/scripts/index.js --no-hmr --target watch",
-    "build": "npm run clear && npm run build:11ty && npm run build:css && npm run build:scripts",
+    "build": "cross-env-shell NODE_ENV=production \"npm run clear && npm run build:11ty && npm run build:css && npm run build:scripts\"",
     "build:11ty": "eleventy --quiet",
     "build:css": "npx postcss src/styles/styles.css --output dist/styles/styles.css",
     "build:scripts": "npx parcel build ./src/scripts/index.js --no-cache --no-autoinstall --no-source-maps --no-scope-hoist --target build",
@@ -29,6 +29,8 @@
     "@babel/preset-env": "^7.17.10",
     "autoprefixer": "^10.4.7",
     "concurrently": "^7.1.0",
+    "cross-env": "^7.0.3",
+    "cssnano": "^5.1.7",
     "eslint": "^8.14.0",
     "eslint-config-prettier": "^8.5.0",
     "normalize.css": "^8.0.1",
