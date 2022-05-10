@@ -5,6 +5,10 @@
     "watch:11ty": "eleventy --serve --quiet",
     "watch:css": "npx postcss src/styles/styles.css --output dist/styles/styles.css --watch",
     "watch:scripts": "npx parcel watch ./src/scripts/index.js --no-hmr --target watch",
+    "build": "npm run clear && npm run build:11ty && npm run build:css && npm run build:scripts",
+    "build:11ty": "eleventy --quiet",
+    "build:css": "npx postcss src/styles/styles.css --output dist/styles/styles.css",
+    "build:scripts": "npx parcel build ./src/scripts/index.js --no-cache --no-autoinstall --no-source-maps --no-scope-hoist --target build",
     "clear": "rm -rf dist .parcel-cache",
     "remove-modules": "rm -rf node_modules/"
   },
