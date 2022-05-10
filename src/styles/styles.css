@@ -1,3 +1,9 @@
 @import '../../node_modules/normalize.css/normalize.css';
 
-@import './components/button.css';
+@import 'fonts.css';
+@import 'components/button.css';
+
+h1 {
+    font-family: 'Proxima Nova';
+    font-weight: 700;
+}

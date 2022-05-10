@@ -3,6 +3,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addWatchTarget('./src/scripts/')
 
     eleventyConfig.addPassthroughCopy('src/robots.txt')
+    eleventyConfig.addPassthroughCopy('src/fonts')
 
     return {
         dir: {
