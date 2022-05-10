@@ -26,10 +26,12 @@
     "autoprefixer": "^10.4.7",
     "concurrently": "^7.1.0",
     "eslint": "^8.14.0",
+    "eslint-config-prettier": "^8.5.0",
     "normalize.css": "^8.0.1",
     "postcss": "^8.4.13",
     "postcss-cli": "^9.1.0",
-    "postcss-import": "^14.1.0"
+    "postcss-import": "^14.1.0",
+    "prettier": "^2.6.2"
   },
   "browserslist": [
     "last 2 version",
