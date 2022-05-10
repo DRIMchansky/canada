@@ -1,7 +1,7 @@
 # TODO
 
-* Base 11ty init
-* Build assets (css, js)
+* ~~Base 11ty init~~
+* ~~Build assets (css, js)~~
 * Layout
   *  Header
   *  Navigation

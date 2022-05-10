@@ -201,23 +201,6 @@ module.exports = {
         'valid-typeof': ['error', { requireStringLiterals: true }],
         'wrap-iife': ['error', 'any', { functionPrototypeMethods: true }],
         'yield-star-spacing': ['error', 'both'],
-        yoda: ['error', 'never'],
-        '@typescript-eslint/explicit-function-return-type': 'off'
-    },
-    //typescript:
-    overrides: [{
-        files: ['**/*.ts', '**/*.tsx'],
-        parserOptions: {
-            ecmaVersion: 2020,
-            sourceType: 'module',
-            project: './tsconfig.json'
-        },
-        parser: '@typescript-eslint/parser',
-        plugins: ['@typescript-eslint'],
-        rules: {
-            '@typescript-eslint/no-unused-vars': ['error', { vars: 'all', args: 'all', ignoreRestSiblings: true, argsIgnorePattern: '^_' }],
-            '@typescript-eslint/explicit-function-return-type': ['error', { allowExpressions: true }],
-            '@typescript-eslint/type-annotation-spacing': ['error', { before: false, after: true, overrides: { arrow: { before: true, after: true } } }]
-        }
-    }]
+        yoda: ['error', 'never']
+    }
 }
